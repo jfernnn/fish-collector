@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>{{fish.name}}</h1>
+
+<div class="card">
+      <div class="card-content">
+        <p>Breed: {{ fish.breed }}</p>
+        <p>Description: {{ fish.description }}</p>
+        <p>Color: {{ fish.color }}</p>
+      </div>
+      <a href="{% url 'fish_update' fish.id %}">Change the Fish</a>
+      <a href="{% url 'fish_delete' fish.id %}">Flush the Fish</a>
+</div>
+
+{% endblock %}

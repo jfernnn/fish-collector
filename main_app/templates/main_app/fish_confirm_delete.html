@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Flush..</h1>
+
+<h4>Are you sure {{object.name}}'s a goner?</h4>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Bye Bye" class="btn">
+    <a href="{ url 'detail' cat.id}">Bring it back!</a>
+</form>
+
+{% endblock %}
